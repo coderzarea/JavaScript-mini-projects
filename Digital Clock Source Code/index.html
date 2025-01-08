@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clockHead">
+            <div class="calendar">
+                <span class="day">Mon,</span>
+                <span class="month">Dec</span>
+                <span class="date">7</span>
+                <span class="year">24</span>
+            </div>
+            <div class="clockFormat">
+                <h3>24-Hour Format</h3>
+                <input type="checkbox" id="formatChanger">
+                <label for="formatChanger" class="switchFormat"></label>
+            </div>
+        </div>
+        <div class="clockContainer">
+            <div class="clock">
+                <span class="hrs">00</span>
+                <span class="colon">:</span>
+                <span class="mins">00</span>
+                <span class="colon">:</span>
+                <span class="secs">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
