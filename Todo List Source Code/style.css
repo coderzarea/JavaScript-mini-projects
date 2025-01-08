@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* --border: 2px solid rgba(255, 255, 255, 0.18); */
+    --shadow: 0 0 30px grey;
+    --theme-color: #0b5ed7;
+    --scrollbar-track-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.entireCode {
+    height: 100vh;
+    width: 100vw;
+    background: url("./Images/1.jpg");
+    background-size: cover;
+}
+
+.mainHeading {
+    width: 150px;
+    color: white;
+    border: 1.5px solid white;
+    font-family: 'poppins', 'sans-serif';
+    font-weight: bold;
+    text-align: center;
+    padding: 7px;
+    position: relative;
+    top: 40px;
+    left: 15.7%;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+
+.container {
+    height: 480px;
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.todoContainer, .completedContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pendingTasks, .completedTasks {
+    height: 400px;
+    width: 380px;
+    border: 1.5px solid white;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.heading {
+    height: 40px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    margin: 20px 0 5px;
+    padding: 7px 0 10px ;
+    font-family: 'poppins', 'sans-serif';
+    background-color: var(--theme-color);
+    box-shadow: 0 0 5px rgb(5, 0, 150);
+    border-radius: 5px;
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(5, 0, 150);
+    font-family: 'poppins', 'sans-serif';
+    position: absolute;
+    left: 85%;
+    top: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    height: 40px;
+    width: 300px;
+    color: black;
+    background-color: aliceblue;
+    box-shadow: 0 0 5px aliceblue;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 15px;
+}
+
+p {
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.popup {
+    height: 270px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    left: 38%;
+    bottom: 100%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease-in-out,
+                bottom 0.8s ease-in-out,
+                transform 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    bottom: 30%;
+    transform: scale(1);
+    transition: transform 1s cubic-bezier(0.18, 0.89, 0.43, 1.19); 
+}
+
+.title {
+    color: white;
+    font-family: 'poppins', 'sans-serif';
+}
+
+#taskInput {
+    /* height: 40px; */
+    width: 83%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.addBtn, .cancelBtn {
+    width: 83%;
+    padding: 5px;
+    margin: 5px 0;
+    color: white;
+    font-family: 'poppins', 'sans-serif';
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.addBtn {
+    background-color: var(--theme-color);
+    border: none;
+}
+
+.addBtn:hover, .cancelBtn:hover {
+    transform: scale(1.02);
+}
+
+.pendingTasks::-webkit-scrollbar, .completedTasks::-webkit-scrollbar {
+    width: 1vw;
+}
+
+.pendingTasks::-webkit-scrollbar-track, .completedTasks::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    margin: 75px 0 75px 0;
+    border-radius: 5px;
+}
+
+.pendingTasks::-webkit-scrollbar-thumb, .completedTasks::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.done, .delete {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-family: 'poppins', 'sans-serif';
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 260px;
+}
+
+.done {
+    background-color: rgb(0, 128, 53);
+    left: 225px;
+}
+
+.badge {
+    position: absolute;
+    left: 215px;
+}
+
+.popupOpacity {
+    opacity: 0.4;
+}
