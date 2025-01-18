@@ -1,1 +1,183 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
 
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#9988e7,#2c3e50);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainBox
+{
+    height: 500px;
+    width: 350px;
+    border: 5px solid #81cce8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1c2d65;
+    color: white;
+    box-shadow: 0 0 10px #81cce8;
+    padding: 10px 0px 10px;
+}
+
+.outputbox
+{
+    height: 55px;
+    width: 300px;
+    background-color: rgb(255, 255, 255,0.08);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outputbox input
+{
+    height: 100%;
+    width: 250px;
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color:white;
+    font-size: 20px;
+}
+
+.outputbox img{
+    width: 20px;
+    filter: invert(1);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.inner
+{
+    height: 50px;
+    width: 300px;
+    border-radius: 8px;
+    background: rgb(255, 255, 255,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner input
+{
+    width: 250px;
+    height: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.inpRange span{
+    display: block;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.settings
+{
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.settings span{
+    color: gray;
+}
+.settings .setting
+{
+    height: 45px;
+    width: 300px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.setting label
+{
+    position: relative;
+    height: 20px;
+    width: 40px;
+    background-color: #D3D3D3;
+    display: block;
+    left: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.setting label::before{
+    content: "";
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px black;
+}
+
+.setting input:checked +label{
+    background:#2196F3;
+}
+
+.setting input:checked +label::before
+{
+    left: 22px;
+}
+
+.setting input
+{
+    display: none;
+}
+
+.option
+{
+    position: relative;
+    width: 200px;
+    right: 240px;
+}
+
+.genBtn
+{
+    width: 300px;
+    height: 40px;
+    background-color: #00d0e7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genBtn button
+{
+    width: 300px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+.genBtn button:hover
+{
+    background-color: #007a94;
+}
+h2{
+    font-size: 20px;
+}
