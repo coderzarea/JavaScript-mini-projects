@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainBox">
+        <h2>PASSWORD GENERATOR</h2>
 
+        <div class="outputbox">
+            <input type="text" id="password" readonly>
+            <img src="copyIcon.png" alt="copy" id="copy" >
+        </div>
+
+        <div class="inpRange">
+            <span id="inpLength">Length : 8</span>
+            <div class="inner">
+                <div class="minRange">4</div>
+                <input type="range" id="range" min="4" max="32" value="8"/>
+                <div class="maxRange">32</div>
+            </div>
+        </div>
+
+        <div class="settings">
+            <span>settings</span>
+
+            <div class="setting">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase"><p class="option">Include uppercase</p></label>
+            </div>
+
+            <div class="setting">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase"><p class="option">Include lowercase</p></label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="numbers">
+                <label for="numbers"><p class="option">Include numbers</p></label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="symbols">
+                <label for="symbols"><p class="option">Include symbols</p></label>
+            </div>
+        </div>
+
+        <div class="genBtn">
+            <button id="generateBtn">Generate Password</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
